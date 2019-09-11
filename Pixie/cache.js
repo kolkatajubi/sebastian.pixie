@@ -11,7 +11,7 @@ client.on("error", function(err) {
 });
 
 module.exports = {
-  setSessionId: sessionId => {
+  setSessionId: (sessionId, username) => {
     return new Promise((resolve, reject) => {
       client.set(sessionId, username, redis.print);
       client.expire(sessionId, 3600);
