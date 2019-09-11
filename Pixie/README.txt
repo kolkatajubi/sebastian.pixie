@@ -7,7 +7,7 @@ Database Login in server --
 	$ ssh root@134.209.157.56
 
 
-DataBase Server Password -  kolkatachampspixie
+All DataBase Password -  kolkatachampspixie
 DataBase IP - 10.139.47.224:27017
 Redis IP - 10.139.47.224:6379
 
@@ -33,7 +33,11 @@ To read a user by username send the following Schema--->
 
 
 Expected output :
-{ status: "success", data: data }  OR  { status: "error", data: err }
+Data is in form of array of objects -->
+
+{"status":"success","data":[{"_id":"5d79105cd183402fa32fdb9a","username":"Sebastian","password":"1234","referral":"q45@hX","__v":0}]}
+
+{"status":"success","data":[{"_id":"5d79105cd183402fa32fdb9a","username":"Sebastian","password":"1234","referral":"q45@hX","__v":0}]}
 
 
 ------------------------THE END------------------------
