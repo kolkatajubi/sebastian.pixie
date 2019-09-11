@@ -34,7 +34,8 @@ app.post("/checkLogin", async (req, res) => {
 });
 
 app.post("/setSessionId", async (req, res) => {
-  res.json(await cache.setSessionId(req.body.sessionId, req.body.username));
+  await cache.setSessionId(req.body.sessionId, req.body.username);
+  res.json({ status: "success" });
 });
 
 app.post("/readByUsername", async (req, res) => {
