@@ -4,6 +4,9 @@
 
 
 Database Login in server --
+	$ ssh root@134.209.149.32
+
+Application Login in server --
 	$ ssh root@134.209.157.56
 
 
