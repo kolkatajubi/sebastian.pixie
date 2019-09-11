@@ -11,5 +11,4 @@ var User = new Schema({
 User.index({ username: 1 });
 User.index({ referral: 1 });
 
-mongoose.model("User", User);
-module.exports = User;
+module.exports = mongoose.model("User", User);
