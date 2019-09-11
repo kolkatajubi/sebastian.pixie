@@ -7,6 +7,6 @@ var db = require("./db");
   //   });
   let resp = await db.readByReferral("q45@hX");
   console.log(JSON.stringify(resp));
-  let resp = await db.readByUsername("Sebastian");
+  resp = await db.readByUsername("Sebastian");
   console.log(JSON.stringify(resp));
 })();
