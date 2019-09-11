@@ -1,5 +1,5 @@
 var redis = require("redis");
-var client = redis.createClient("10.139.47.224", "6379");
+var client = redis.createClient("6379", "10.139.47.224");
 client.auth("kolkatachampspixie");
 
 client.on("connect", function() {
