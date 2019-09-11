@@ -29,22 +29,22 @@ app.listen(port, ipaddress, () =>
   console.log(`Listening at ${ipaddress}:${port}...`)
 );
 
-app.post("/checkLogin", (req, res) => {
+app.post("/checkLogin", async (req, res) => {
   res.json(await cache.checkLogin(req.body.sessionId, req.body.username));
 });
 
-app.post("/setSessionId", (req, res) => {
+app.post("/setSessionId", async (req, res) => {
   res.json(await cache.setSessionId(req.body.sessionId));
 });
 
-app.post("/readByUsername", (req, res) => {
+app.post("/readByUsername", async (req, res) => {
   res.json(await db.readByUsername(req.body.username));
 });
 
-app.post("/readByReferral", (req, res) => {
+app.post("/readByReferral", async (req, res) => {
   res.json(await db.readByReferral(req.body.referral));
 });
 
-app.post("/createUser", (req, res) => {
+app.post("/createUser", async (req, res) => {
   res.json(await db.createUser(req.body));
 });
